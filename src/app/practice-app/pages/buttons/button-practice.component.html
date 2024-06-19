@@ -1,0 +1,123 @@
+<mat-tab-group>
+
+  <mat-tab label="Lists">
+    <div class="grid-container">
+      <div class="grid-item">
+        
+        <list-practice></list-practice>
+    
+      </div> 
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Buttons">
+    <div class="grid-container">
+      <div class="grid-item">
+
+        <mat-card class="mat-card">
+          <mat-card-content>
+                    
+            <h3>
+              Spy directive tracks each element created using ngFor and outputs log during OnInit & OnDestroy lifecycle hooks
+            </h3>
+
+            <app-spy-directive></app-spy-directive>
+            
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="mat-card">
+          <mat-card-content>
+                    
+            <h3>
+              Disabled state of button is one-way bound to 'isUnchanged' component property
+            </h3>
+
+            <!-- Bind button disabled state to `isUnchanged` property -->
+            <button type="button" [disabled]="isUnchanged">Save</button>
+            
+          </mat-card-content>
+        </mat-card>
+    
+        <mat-card class="mat-card">
+          <mat-card-content>
+                    
+            <h3>
+              Button prints 'hello world' after making API call
+            </h3>
+            
+            <div id="button-row" (click)="onClickHelloWorld()">
+              
+              <div>
+                <button mat-raised-button>Hello World</button>
+              </div>
+        
+              <div>
+                {{helloWorldString}}
+              </div>
+            </div>
+        
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="mat-card">
+          <mat-card-content>
+                    
+            <h3>
+              Button changes color using ngClass
+            </h3>
+            
+            <div id="button-row" (click)="onClickNgClass()">
+              
+              <div [ngClass]="isSpecial ? 'special' : ''">
+                <button mat-raised-button>Toggle ngClass</button>
+              </div>
+        
+            </div>
+        
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="mat-card">
+          <mat-card-content>
+                    
+            <h3>
+              Button toggles text display using ngIf
+            </h3>
+            
+            <div id="button-row" (click)="onClickNgIf()">
+              <div>
+                <button mat-raised-button>Toggle ngIfVar</button>
+              </div>
+            </div>
+
+            <div *ngIf="ngIfVar">
+              ngIf evaluated to true !
+            </div>
+        
+          </mat-card-content>
+        </mat-card>
+        
+      </div>
+    </div>
+      
+  </mat-tab>
+  <mat-tab label="Forms">
+    <div class="grid-container">
+      <div class="grid-item">
+        
+        <form-practice></form-practice>
+    
+      </div> 
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Tables">
+    <div class="grid-container">
+      <div class="grid-item">
+        <table-practice></table-practice>  
+      </div>
+    </div>
+  
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,41 @@
+<div class="form-container">
+  <mat-card class="mat-card">
+    <mat-card-content>
+      <h3>
+        Forms: Label turns yellow when hovered over using custom directive
+      </h3>
+
+      <div appHighlight>Custom directive example.</div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="mat-card">
+    <mat-card-content class="mat-card-content">
+      <h3>Forms: Display text from input element.</h3>
+
+      <mat-form-field class="mat-form-field">
+        <mat-label>Input</mat-label>
+        <input matInput [(ngModel)]="inputText" />
+      </mat-form-field>
+      <mat-form-field class="mat-form-field">
+        <mat-label>Select</mat-label>
+        <mat-select [(ngModel)]="selectText">
+          <mat-option value="First option">First option</mat-option>
+          <mat-option value="Second option">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="mat-form-field">
+        <mat-label>Description</mat-label>
+        <textarea matInput [(ngModel)]="descriptionText"></textarea>
+      </mat-form-field>
+
+      <div id="input-description-text">
+        <div id="input-text">Input Text: {{ inputText }}</div>
+
+        <div id="select-text">Select Text: {{ selectText }}</div>
+
+        <div>Description Text: {{ descriptionText }}</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

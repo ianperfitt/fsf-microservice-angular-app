@@ -4,15 +4,16 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { helloWorldReducer } from './state/reducer';
 import { HelloWorldEffects } from './state/effect';
-import { ButtonPracticeComponent } from './pages/buttons/button-practice';
+import { ButtonPracticeComponent } from './components/buttons/button-practice';
 import { MaterialModule } from '../material/material/material.module';
-import { TablePracticeComponent } from './pages/tables/table-practice.component';
-import { FormPracticeComponent } from './pages/forms/form-practice.component';
+import { TablePracticeComponent } from './components/tables/table-practice.component';
+import { FormPracticeComponent } from './components/forms/form-practice.component';
 import { FormsModule } from '@angular/forms';
-import { ListPracticeComponent } from './pages/lists/list-practice.component';
+import { ListPracticeComponent } from './components/lists/list-practice.component';
 import { PracticeAppRoutingModule } from './practice-app-routing.module';
 import { SpyComponent } from './components/spy/spy.component';
 import { HighlightDirective } from './directives/comment.directive';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
 
@@ -23,7 +24,8 @@ import { HighlightDirective } from './directives/comment.directive';
         FormPracticeComponent,
         ListPracticeComponent,
         HighlightDirective,
-        SpyComponent
+        SpyComponent,
+        DashboardComponent
     ],
     imports: [
         CommonModule,

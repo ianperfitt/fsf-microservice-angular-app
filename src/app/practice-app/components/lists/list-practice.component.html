@@ -1,0 +1,13 @@
+<mat-card class="mat-card">
+  <mat-card-content>
+    <h3>Lists: Make & display list selections.</h3>
+
+    <mat-selection-list #shoes>
+      @for (shoe of typesOfShoes; track shoe) {
+      <mat-list-option>{{ shoe }}</mat-list-option>
+      }
+    </mat-selection-list>
+
+    <p>Options selected: {{ shoes.selectedOptions.selected.length }}</p>
+  </mat-card-content>
+</mat-card>

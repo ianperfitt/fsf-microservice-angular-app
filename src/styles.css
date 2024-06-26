@@ -1,4 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: whitesmoke; 
+}
+
+.mat-card {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  flex: 1 0 auto;
+}
+
+.button-container,
+.table-container,
+.list-container,
+.form-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
